@@ -1,4 +1,3 @@
-import { ArrowUpRight } from 'lucide-react';
 import logo from '../assets/icon.jpeg';
 
 export default function Footer() {
@@ -23,7 +22,7 @@ export default function Footer() {
             <p className="mt-5 max-w-sm text-sm leading-7 text-[#AFC0C5]">
               Building skills. Building people. Building solutions.
               Empowering the next generation of technology builders
-              and problem-solvers.
+              and problem solvers.
             </p>
 
             <a
@@ -33,7 +32,6 @@ export default function Footer() {
               className="mt-7 inline-flex items-center gap-2 text-sm font-semibold text-[#F28C5B] transition hover:gap-3"
             >
               Become part of the community
-              <ArrowUpRight size={17} />
             </a>
           </div>
 
@@ -70,7 +68,6 @@ export default function Footer() {
               className="mt-5 inline-flex items-center gap-2 rounded-full border border-[#F28C5B]/50 px-5 py-2.5 text-sm font-semibold text-[#F28C5B] transition hover:bg-[#F28C5B] hover:text-[#09172C]"
             >
               Apply to join
-              <ArrowUpRight size={16} />
             </a>
           </div>
         </div>

@@ -3,8 +3,6 @@ import {
   Compass,
   BookOpen,
   Users,
-  ArrowDownRight,
-  MoveUpRight,
   Hammer,
   Lightbulb,
 } from 'lucide-react';
@@ -31,7 +29,7 @@ const pillars = [
     icon: Hammer,
     title: 'Turn learning into building',
     description:
-      'Apply what you learn, work on practical projects, and develop solutions to real-world problems.',
+      'Apply what you learn, work on practical projects, and develop solutions to real world problems.',
     accent: '#F28C5B',
   },
   {
@@ -61,8 +59,8 @@ export default function About() {
     >
       {/* Background details */}
       <div className="pointer-events-none absolute inset-0">
-        <div className="absolute -left-40 top-20 h-96 w-96 rounded-full bg-[#0F766E]/20 blur-[120px]" />
-        <div className="absolute -right-40 bottom-0 h-96 w-96 rounded-full bg-[#F28C5B]/10 blur-[120px]" />
+        <div className="absolute -left-40 top-20 h-96 w-96 rounded-full bg-[#0F766E]/20 blur-[40px] md:blur-[120px]" />
+        <div className="absolute -right-40 bottom-0 h-96 w-96 rounded-full bg-[#F28C5B]/10 blur-[40px] md:blur-[120px]" />
         <div
           className="absolute inset-0 opacity-[0.045]"
           style={{
@@ -89,9 +87,7 @@ export default function About() {
               href="#about"
               className="mb-5 inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.25em] text-[#F28C5B] transition-colors hover:text-[#FFC09F]"
             >
-              <span className="h-px w-8 bg-[#F28C5B]" />
               The opportunity
-              <MoveUpRight size={13} />
             </a>
 
             <h2 className="max-w-md text-4xl font-semibold leading-[1.12] tracking-tight md:text-5xl lg:text-6xl">
@@ -146,10 +142,6 @@ export default function About() {
               <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-[#0F766E]/25 text-[#62C5B5]">
                 <Lightbulb size={27} />
               </div>
-              <ArrowDownRight
-                size={32}
-                className="rotate-[-45deg] text-[#F28C5B] md:rotate-0"
-              />
               <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-[#F28C5B]/15 text-[#F28C5B]">
                 <Hammer size={27} />
               </div>
@@ -163,11 +155,9 @@ export default function About() {
             <span className="rounded-full border border-[#62C5B5]/30 bg-[#0F766E]/15 px-4 py-2 text-sm text-[#A9E1D6]">
               Learn
             </span>
-            <ArrowDownRight size={15} className="text-[#F28C5B]" />
             <span className="rounded-full border border-[#F28C5B]/30 bg-[#F28C5B]/10 px-4 py-2 text-sm text-[#FFC09F]">
               Build
             </span>
-            <ArrowDownRight size={15} className="text-[#F28C5B]" />
             <span className="rounded-full border border-white/15 bg-white/5 px-4 py-2 text-sm text-[#E0EAE7]">
               Grow
             </span>
@@ -183,7 +173,6 @@ export default function About() {
                 className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.22em] text-[#F28C5B] transition-colors hover:text-[#FFC09F]"
               >
                 What drives us
-                <MoveUpRight size={13} />
               </a>
               <h3 className="mt-3 text-2xl font-semibold md:text-3xl">
                 More than learning. A path to building.
@@ -271,7 +260,6 @@ export default function About() {
             className="inline-flex shrink-0 items-center gap-2 text-sm font-semibold text-[#F28C5B] transition-all hover:gap-3"
           >
             Discover what drives us
-            <MoveUpRight size={16} />
           </a>
         </div>
       </div>

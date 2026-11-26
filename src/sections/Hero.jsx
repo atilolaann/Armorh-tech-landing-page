@@ -1,11 +1,6 @@
 import { useEffect, useState } from 'react';
-import { AnimatePresence, motion } from 'framer-motion';
-import {
-  ArrowRight,
-  ChevronLeft,
-  ChevronRight,
-  Sparkles,
-} from 'lucide-react';
+import { AnimatePresence, motion, useReducedMotion } from 'framer-motion';
+import { ChevronLeft, ChevronRight, Sparkles } from 'lucide-react';
 
 const slides = [
   {
@@ -36,41 +31,41 @@ const slides = [
     title: 'Learn. Build. Connect.',
     highlight: 'Continue.',
     description:
-      'Become part of a community that grows beyond each cohort — where learners become alumni, mentors, contributors, builders and future partners.',
+      'Become part of a community that grows beyond each cohort, where learners become alumni, mentors, contributors, builders and future partners.',
     label: 'Become part of the community',
     link: '#community',
     visual: 'community',
   },
 ];
 
-function HeroVisual({ type }) {
+function HeroVisual({ type, reduceMotion }) {
   return (
     <div className="relative mx-auto flex aspect-square w-full max-w-[480px] items-center justify-center">
       {/* Decorative orbit rings */}
       <motion.div
-        animate={{ rotate: 360 }}
-        transition={{ duration: 45, repeat: Infinity, ease: 'linear' }}
+        animate={reduceMotion ? undefined : { rotate: 360 }}
+        transition={reduceMotion ? undefined : { duration: 45, repeat: Infinity, ease: 'linear' }}
         className="absolute h-[85%] w-[85%] rounded-full border border-white/10"
       />
       <motion.div
-        animate={{ rotate: -360 }}
-        transition={{ duration: 35, repeat: Infinity, ease: 'linear' }}
+        animate={reduceMotion ? undefined : { rotate: -360 }}
+        transition={reduceMotion ? undefined : { duration: 35, repeat: Infinity, ease: 'linear' }}
         className="absolute h-[65%] w-[65%] rounded-full border border-dashed border-teal-400/30"
       />
 
       {/* Background glow */}
-      <div className="absolute h-56 w-56 rounded-full bg-teal-500/20 blur-[90px]" />
+      <div className="absolute h-56 w-56 rounded-full bg-teal-500/20 blur-[40px] sm:blur-[90px]" />
 
       {type === 'foundation' && (
         <div className="relative flex h-64 w-64 items-center justify-center">
           <motion.div
-            animate={{ y: [0, -12, 0], rotate: [0, 4, 0] }}
-            transition={{ duration: 5, repeat: Infinity, ease: 'easeInOut' }}
+            animate={reduceMotion ? undefined : { y: [0, -12, 0], rotate: [0, 4, 0] }}
+            transition={reduceMotion ? undefined : { duration: 5, repeat: Infinity, ease: 'easeInOut' }}
             className="absolute inset-8 rotate-45 rounded-[2rem] border border-teal-400/40 bg-teal-500/10 backdrop-blur-sm"
           />
           <motion.div
-            animate={{ y: [0, 12, 0], rotate: [0, -5, 0] }}
-            transition={{ duration: 6, repeat: Infinity, ease: 'easeInOut' }}
+            animate={reduceMotion ? undefined : { y: [0, 12, 0], rotate: [0, -5, 0] }}
+            transition={reduceMotion ? undefined : { duration: 6, repeat: Infinity, ease: 'easeInOut' }}
             className="absolute inset-16 rounded-3xl border border-orange-400/50 bg-orange-400/10"
           />
           <div className="relative z-10 flex h-28 w-28 items-center justify-center rounded-3xl border border-white/20 bg-[#10243D] shadow-2xl shadow-teal-950/50">
@@ -87,8 +82,8 @@ function HeroVisual({ type }) {
             <motion.div
               key={index}
               initial={{ height: 20, opacity: 0 }}
-              animate={{ height, opacity: 1 }}
-              transition={{
+              animate={reduceMotion ? { height, opacity: 1 } : { height, opacity: 1 }}
+              transition={reduceMotion ? { duration: 0 } : {
                 duration: 1,
                 delay: index * 0.18,
                 repeat: Infinity,
@@ -104,13 +99,6 @@ function HeroVisual({ type }) {
               }`}
             />
           ))}
-          <motion.div
-            animate={{ x: [0, 12, 0], y: [0, -8, 0] }}
-            transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut' }}
-            className="absolute -right-1 top-4 rounded-2xl border border-teal-300/30 bg-[#10243D]/90 p-4 shadow-xl"
-          >
-            <ArrowRight className="text-orange-400" size={28} />
-          </motion.div>
           <div className="absolute -left-5 top-14 h-14 w-14 rounded-2xl border border-orange-300/30 bg-orange-400/10" />
         </div>
       )}
@@ -119,8 +107,8 @@ function HeroVisual({ type }) {
         <div className="relative h-72 w-72">
           <svg viewBox="0 0 300 300" className="absolute inset-0 h-full w-full">
             <motion.g
-              animate={{ rotate: 360 }}
-              transition={{ duration: 50, repeat: Infinity, ease: 'linear' }}
+              animate={reduceMotion ? undefined : { rotate: 360 }}
+              transition={reduceMotion ? undefined : { duration: 50, repeat: Infinity, ease: 'linear' }}
               style={{ transformOrigin: '150px 150px' }}
             >
               <circle cx="150" cy="150" r="105" fill="none" stroke="#0F766E" strokeOpacity=".5" strokeDasharray="5 9" />
@@ -132,8 +120,8 @@ function HeroVisual({ type }) {
             <path d="M150 150 L150 45 M150 150 L255 150 M150 150 L150 255 M150 150 L45 150" stroke="#0F766E" strokeOpacity=".5" strokeWidth="1.5" />
           </svg>
           <motion.div
-            animate={{ scale: [1, 1.07, 1] }}
-            transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut' }}
+            animate={reduceMotion ? undefined : { scale: [1, 1.07, 1] }}
+            transition={reduceMotion ? undefined : { duration: 4, repeat: Infinity, ease: 'easeInOut' }}
             className="absolute left-1/2 top-1/2 flex h-28 w-28 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full border border-teal-300/40 bg-teal-500/15 shadow-[0_0_60px_rgba(15,118,110,0.2)]"
           >
             <span className="text-4xl font-semibold tracking-tighter text-white">A.</span>
@@ -150,7 +138,22 @@ function HeroVisual({ type }) {
 
 function Hero() {
   const [activeSlide, setActiveSlide] = useState(0);
+  const reduceMotion = useReducedMotion();
+  const [isMobile, setIsMobile] = useState(() =>
+    typeof window !== 'undefined'
+      ? window.matchMedia('(max-width: 767px)').matches
+      : false
+  );
+  const lightweightMotion = reduceMotion || isMobile;
   const currentSlide = slides[activeSlide];
+
+  useEffect(() => {
+    const mobileQuery = window.matchMedia('(max-width: 767px)');
+    const updateMobile = (event) => setIsMobile(event.matches);
+
+    mobileQuery.addEventListener('change', updateMobile);
+    return () => mobileQuery.removeEventListener('change', updateMobile);
+  }, []);
 
   const nextSlide = () => {
     setActiveSlide((current) => (current + 1) % slides.length);
@@ -161,9 +164,11 @@ function Hero() {
   };
 
   useEffect(() => {
+    if (lightweightMotion) return undefined;
+
     const timer = setInterval(nextSlide, 7000);
     return () => clearInterval(timer);
-  }, []);
+  }, [lightweightMotion]);
 
   return (
     <section id="home" className="relative isolate min-h-[620px] overflow-hidden bg-[#09172C] pt-[78px] text-[#F8F5EF]">
@@ -178,22 +183,21 @@ function Hero() {
         }}
       />
 
-      <div className="pointer-events-none absolute -right-40 -top-40 -z-10 h-[500px] w-[500px] rounded-full bg-teal-700/20 blur-[130px]" />
-      <div className="pointer-events-none absolute -bottom-48 -left-40 -z-10 h-[450px] w-[450px] rounded-full bg-orange-500/10 blur-[130px]" />
+      <div className="pointer-events-none absolute -right-40 -top-40 -z-10 h-[500px] w-[500px] rounded-full bg-teal-700/20 blur-[40px] md:blur-[130px]" />
+      <div className="pointer-events-none absolute -bottom-48 -left-40 -z-10 h-[450px] w-[450px] rounded-full bg-orange-500/10 blur-[40px] md:blur-[130px]" />
 
       <div className="mx-auto flex min-h-[542px] max-w-7xl flex-col justify-center px-6 py-12 md:px-12 lg:px-16">
         <AnimatePresence mode="wait">
           <motion.div
             key={activeSlide}
-            initial={{ opacity: 0, y: 22 }}
+            initial={lightweightMotion ? { opacity: 0 } : { opacity: 0, y: 22 }}
             animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -18 }}
-            transition={{ duration: 0.65, ease: [0.22, 1, 0.36, 1] }}
+            exit={lightweightMotion ? { opacity: 0 } : { opacity: 0, y: -18 }}
+            transition={{ duration: lightweightMotion ? 0.25 : 0.65, ease: [0.22, 1, 0.36, 1] }}
             className="grid items-center gap-12 lg:grid-cols-[1.1fr_0.9fr]"
           >
             <div className="max-w-2xl">
               <div className="mb-8 flex items-center gap-3">
-                <span className="h-px w-9 bg-orange-400" />
                 <p className="text-xs font-semibold uppercase tracking-[0.24em] text-teal-300">
                   {currentSlide.eyebrow}
                 </p>
@@ -220,7 +224,6 @@ function Hero() {
                   className="group inline-flex items-center gap-3 rounded-full bg-[#F28C5B] px-7 py-4 text-sm font-semibold text-[#09172C] transition-all hover:bg-[#FFAA7F]"
                 >
                   {currentSlide.label}
-                  <ArrowRight size={18} className="transition-transform group-hover:translate-x-1" />
                 </a>
                 <span className="text-sm text-white/50">
                   Free. Fully online. Community-driven.
@@ -228,7 +231,7 @@ function Hero() {
               </div>
             </div>
 
-            <HeroVisual type={currentSlide.visual} />
+            <HeroVisual type={currentSlide.visual} reduceMotion={lightweightMotion} />
           </motion.div>
         </AnimatePresence>
 
@@ -248,7 +251,7 @@ function Hero() {
               />
             ))}
             <span className="ml-3 text-xs tracking-widest text-white/50">
-              0{activeSlide + 1} — 03
+              0{activeSlide + 1} / 03
             </span>
           </div>
 

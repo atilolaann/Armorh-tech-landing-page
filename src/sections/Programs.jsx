@@ -6,7 +6,6 @@ import {
   Code2,
   Server,
   ShieldCheck,
-  ArrowUpRight,
   Sparkles,
   Users,
   Lightbulb,
@@ -89,8 +88,8 @@ const foundation = [
   },
   {
     icon: Lightbulb,
-    title: 'Problem-solving',
-    text: 'Identify real-world problems and explore meaningful solutions.',
+    title: 'Problem solving',
+    text: 'Identify real world problems and explore meaningful solutions.',
   },
   {
     icon: Target,
@@ -107,8 +106,8 @@ export default function Programs() {
     >
       {/* Background atmosphere */}
       <div className="pointer-events-none absolute inset-0 overflow-hidden">
-        <div className="absolute -right-40 top-0 h-96 w-96 rounded-full bg-[#62C5B5]/10 blur-[120px]" />
-        <div className="absolute -left-40 bottom-20 h-96 w-96 rounded-full bg-[#F28C5B]/10 blur-[120px]" />
+        <div className="absolute -right-40 top-0 h-96 w-96 rounded-full bg-[#62C5B5]/10 blur-[40px] md:blur-[120px]" />
+        <div className="absolute -left-40 bottom-20 h-96 w-96 rounded-full bg-[#F28C5B]/10 blur-[40px] md:blur-[120px]" />
 
         <div
           className="absolute inset-0 opacity-[0.045]"
@@ -131,7 +130,6 @@ export default function Programs() {
         >
           <div>
             <span className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-[0.23em] text-[#F28C5B]">
-              <span className="h-px w-8 bg-[#F28C5B]" />
               Explore your path
             </span>
 
@@ -216,10 +214,6 @@ export default function Programs() {
                   <span className="text-xs font-medium text-[#91AAA9]">
                     Armorh Tech · Learning Track
                   </span>
-                  <ArrowUpRight
-                    size={19}
-                    className="text-[#62C5B5] transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1"
-                  />
                 </div>
               </motion.div>
             );
@@ -258,7 +252,6 @@ export default function Programs() {
               </p>
 
               <div className="mt-8 flex items-center gap-3">
-                <div className="h-px w-10 bg-[#F28C5B]" />
                 <span className="text-xs font-semibold uppercase tracking-widest text-[#F28C5B]">
                   Learn together. Build together.
                 </span>
@@ -304,7 +297,6 @@ export default function Programs() {
             className="inline-flex shrink-0 items-center gap-2 text-sm font-semibold text-[#F28C5B] transition-all hover:gap-3"
           >
             Discover the experience
-            <ArrowUpRight size={17} />
           </a>
         </div>
       </div>

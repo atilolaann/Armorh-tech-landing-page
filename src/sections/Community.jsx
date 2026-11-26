@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { ArrowUpRight, Users, Handshake, Sparkles } from 'lucide-react';
+import { Users, Handshake, Sparkles } from 'lucide-react';
 
 export default function Community() {
   return (
@@ -7,8 +7,8 @@ export default function Community() {
       id="community"
       className="relative overflow-hidden bg-[#09172C] px-5 py-16 text-[#F8F5EF] md:px-10 md:py-20"
     >
-      <div className="pointer-events-none absolute -right-40 top-10 h-96 w-96 rounded-full bg-[#0F766E]/20 blur-[120px]" />
-      <div className="pointer-events-none absolute -left-40 bottom-0 h-80 w-80 rounded-full bg-[#F28C5B]/10 blur-[120px]" />
+      <div className="pointer-events-none absolute -right-40 top-10 h-96 w-96 rounded-full bg-[#0F766E]/20 blur-[40px] md:blur-[120px]" />
+      <div className="pointer-events-none absolute -left-40 bottom-0 h-80 w-80 rounded-full bg-[#F28C5B]/10 blur-[40px] md:blur-[120px]" />
 
       <div className="relative z-10 mx-auto max-w-6xl">
         <motion.div
@@ -102,7 +102,6 @@ export default function Community() {
               className="inline-flex items-center gap-2 rounded-full bg-[#F28C5B] px-7 py-3.5 text-sm font-semibold text-[#09172C] transition-all hover:-translate-y-1 hover:bg-[#FFA77F]"
             >
               Apply to join
-              <ArrowUpRight size={17} />
             </a>
 
           </div>

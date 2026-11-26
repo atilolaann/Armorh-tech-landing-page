@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Menu, X, ArrowUpRight } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 import logo from '../assets/icon.jpeg';
 
 export default function Navbar() {
@@ -53,7 +53,6 @@ export default function Navbar() {
             className="inline-flex items-center gap-2 rounded-full bg-[#F28C5B] px-5 py-3 text-sm font-semibold text-[#09172C] transition-all hover:-translate-y-0.5 hover:bg-[#FFA77F]"
           >
             Apply Now
-            <ArrowUpRight size={16} />
           </a>
         </div>
 
@@ -93,7 +92,6 @@ export default function Navbar() {
               className="mt-2 inline-flex w-full items-center justify-center gap-2 rounded-full bg-[#F28C5B] px-5 py-3.5 text-sm font-semibold text-[#09172C]"
             >
               Apply Now
-              <ArrowUpRight size={16} />
             </a>
           </div>
         </div>

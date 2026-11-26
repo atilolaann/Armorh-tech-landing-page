@@ -2,7 +2,6 @@ import { motion } from 'framer-motion';
 import {
   Compass,
   Target,
-  ArrowUpRight,
   Sparkles,
   Layers3,
   Lightbulb,
@@ -16,8 +15,8 @@ export default function MissionVision() {
     >
       {/* Background atmosphere */}
       <div className="pointer-events-none absolute inset-0 overflow-hidden">
-        <div className="absolute -left-40 top-20 h-96 w-96 rounded-full bg-[#0F766E]/15 blur-[130px]" />
-        <div className="absolute -right-40 bottom-0 h-96 w-96 rounded-full bg-[#F28C5B]/10 blur-[130px]" />
+        <div className="absolute -left-40 top-20 h-96 w-96 rounded-full bg-[#0F766E]/15 blur-[40px] md:blur-[130px]" />
+        <div className="absolute -right-40 bottom-0 h-96 w-96 rounded-full bg-[#F28C5B]/10 blur-[40px] md:blur-[130px]" />
 
         <div
           className="absolute inset-0 opacity-[0.035]"
@@ -42,7 +41,6 @@ export default function MissionVision() {
           className="mb-10 max-w-2xl"
         >
           <span className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.25em] text-[#F28C5B]">
-            <span className="h-px w-8 bg-[#F28C5B]" />
             Our purpose
           </span>
 
@@ -88,9 +86,9 @@ export default function MissionVision() {
 
               <p className="mt-6 max-w-lg text-base leading-8 text-[#D0DEDA] md:text-lg">
                 To build a sustainable community of future technology
-                professionals, builders, and problem-solvers who use
+                professionals, builders, and problem solvers who use
                 technology to create opportunities and develop solutions to
-                real-world problems.
+                real world problems.
               </p>
 
               <div className="mt-8 flex items-center gap-3 border-t border-white/10 pt-6">
@@ -128,7 +126,7 @@ export default function MissionVision() {
               </h3>
 
               <p className="mt-6 max-w-lg text-base leading-8 text-[#D0DEDA] md:text-lg">
-                To provide accessible, practical, and community-driven
+                To provide accessible, practical, and community driven
                 technology development opportunities that equip young people
                 with relevant skills, encourage collaboration, and inspire
                 them to build solutions with lasting impact.
@@ -182,7 +180,6 @@ export default function MissionVision() {
               className="mt-9 inline-flex items-center gap-3 rounded-full bg-[#F28C5B] px-6 py-3.5 text-sm font-semibold text-[#09172C] transition-all duration-300 hover:-translate-y-1 hover:bg-[#FFAB80]"
             >
               Explore our learning tracks
-              <ArrowUpRight size={17} />
             </a>
           </div>
         </motion.div>
