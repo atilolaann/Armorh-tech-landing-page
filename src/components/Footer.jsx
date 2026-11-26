@@ -27,7 +27,7 @@ export default function Footer() {
             </p>
 
             <a
-              href="https://armorh-tech-apply.vercel.app/"
+              href="https://apply.armorhtech.com/"
               target="_blank"
               rel="noreferrer"
               className="mt-7 inline-flex items-center gap-2 text-sm font-semibold text-[#F28C5B] transition hover:gap-3"
@@ -64,7 +64,7 @@ export default function Footer() {
             </p>
 
             <a
-              href="https://armorh-tech-apply.vercel.app/"
+              href="https://apply.armorhtech.com/"
               target="_blank"
               rel="noreferrer"
               className="mt-5 inline-flex items-center gap-2 rounded-full border border-[#F28C5B]/50 px-5 py-2.5 text-sm font-semibold text-[#F28C5B] transition hover:bg-[#F28C5B] hover:text-[#09172C]"

@@ -96,7 +96,7 @@ export default function Community() {
 
           <div className="mt-9 flex flex-col items-center justify-center gap-4 sm:flex-row">
             <a
-              href="https://armorh-tech-apply.vercel.app/"
+              href="https://apply.armorhtech.com/"
               target="_blank"
               rel="noreferrer"
               className="inline-flex items-center gap-2 rounded-full bg-[#F28C5B] px-7 py-3.5 text-sm font-semibold text-[#09172C] transition-all hover:-translate-y-1 hover:bg-[#FFA77F]"

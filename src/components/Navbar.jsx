@@ -12,7 +12,7 @@ export default function Navbar() {
     { name: 'Partners', href: '#partners' },
   ];
 
-  const applyLink = 'https://armorh-tech-apply.vercel.app/';
+  const applyLink = 'https://apply.armorhtech.com/';
 
   return (
     <nav aria-label="Main navigation" className="fixed left-0 top-0 z-50 w-full border-b border-white/10 bg-[#102C38]">
